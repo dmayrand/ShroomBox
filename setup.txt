@@ -1,0 +1,25 @@
+Setting up ShroomBox client for RPI nano
+1- Install raspbian lite
+2- Enable SSH (sudo raspi-config)
+3- Enable Camera
+4- Change host name to shroombox
+5- sudo apt-get install python3-rpi.gpio
+6- sudo apt-get install netatalk
+7- sudo apt-get install python3-picamera
+8- AccessPoint
+8.1 ./backup_station.sh    Backup station config
+8.2 ./makeaccesspoint.sh   Setup access point
+8.3 ./backup_ap.sh         Backup access point config
+
+
+
+sudo nano /etc/rc.local
+
+
+cd /home/pi/sk
+sudo ./runonstartup.sh &
+
+
+// Scripts must have execute priviledge
+runonstartup.sh
+setupwifi.sh
