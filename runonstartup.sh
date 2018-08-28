@@ -2,9 +2,11 @@
 #
 
 echo "Starting up ShroomBox apps"
-#run local client
+## start local server
 sudo python3 shroomserver.py & 
-#run local input listener
 cd ap
-sudo python3 resetwifi.py &
-#run diversity engine
+## start the listener of the button on  GPIO 26
+sudo python3 resetbutton.py &
+## start the main engine
+cd ../../akcore
+# sudo python3 divae.py

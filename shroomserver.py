@@ -30,16 +30,16 @@ SUCCESS_CODE = {'code':"2000", "msg":"Success"};
 class ConfigReader:
 	def openconfig(self):
 		config = configparser.ConfigParser()
-		config.read('bid.cfg')
+		config.read('../cfg/config.cfg')
 		return config
 		
 	def getboxid(self):
 		config = self.openconfig()
-		return config.get("bid", "identifier")
+		return config.get("main", "deviceid")
  
 	def getpassword(self):
 		config = self.openconfig()
-		return config.get("bid", "psw")
+		return config.get("main", "password")
 
 class MyServer(BaseHTTPRequestHandler):
 
